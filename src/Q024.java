@@ -1,15 +1,15 @@
 import java.util.function.BiFunction;
 
-public class Q0024<T> {
+public class Q024<T> {
     final BiFunction<T, T, Boolean> validator;
     T left = null;  
     T right = null; 
 
-    private Q0024() {
+    private Q024() {
         validator = null;
     }
 
-    Q0024(BiFunction<T, T, Boolean> v, T x, T y) {
+    Q024(BiFunction<T, T, Boolean> v, T x, T y) {
         validator = v;
         set(x, y);
     }
@@ -42,7 +42,7 @@ class Pair {
 
     private static void testPair(String left, String right) {
         try {
-            Q0024<String> p = new Q0024<>((a, b) -> a != null && b != null, left, right);
+            Q024<String> p = new Q024<>((a, b) -> a != null && b != null, left, right);
             System.out.println("Is valid: " + p.isValid());
         } catch (IllegalArgumentException e) {
             System.out.println("Caught IllegalArgumentException as expected for invalid input."); // 應該印出這條信息
