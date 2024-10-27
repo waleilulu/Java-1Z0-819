@@ -5,6 +5,7 @@ public class Q024<T> {
     T left = null;  
     T right = null; 
 
+    @SuppressWarnings("unused")
     private Q024() {
         validator = null;
     }
