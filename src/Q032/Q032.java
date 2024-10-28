@@ -1,3 +1,4 @@
+package Q032;
 import java.io.*;
 
 public class Q032 {
@@ -24,8 +25,15 @@ public class Q032 {
         student.address = "台北市"; // 設定 address
         student.classes.id = "Class A";
         
+        // 確保目錄存在
+        File directory = new File("src/Q032");
+        if (!directory.exists()) {
+            directory.mkdirs(); // 創建目錄
+        }
+
+
         // 序列化物件
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("student.ser"))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("src/Q032/student.ser"))) {
             out.writeObject(student);
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,7 +41,7 @@ public class Q032 {
 
         // 反序列化物件
         Student deserializedStudent = null;
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("student.ser"))) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("src/Q032/student.ser"))) {
             deserializedStudent = (Student) in.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
