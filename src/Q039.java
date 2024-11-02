@@ -16,7 +16,7 @@ public class Q039<N extends Number, C extends Collection<N>> {
     public static void main(String[] args) {
         var numbers = List.of(5, 4, 6, 3, 7, 2, 8, 1, 9); // line 5
         Q039<Integer, List<Integer>> c = new Q039<>();
-        System.out.println(c.sum(numbers));
+        System.out.println(c.sum(numbers)); //45.0
     }
 }
 
