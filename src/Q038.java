@@ -32,26 +32,20 @@ public class Q038 {
 }
 
 /*
- * You must make the count variable thread safe.
- * Which two modifications meet your requirement? (Choose two.)
- * A. replace line 2 with public static synchronized void main(String[] args) {
- * B. replace line 1 with private volatile int count = 0;
- * 
- * C. replace line 3 with
- * synchronized(test) {
- * test.count++;
- * }
- * 這段代碼使用同步來保護 count 的更新，從而確保在任何時刻只有一個線程能夠進行更新，這樣是線程安全的。
- * 
- * D. replace line 1 with private AtomicInteger count = new AtomicInteger(0);
- * and replace line 3 with test.count.incrementAndGet();
- * AtomicInteger 提供了原子操作來安全地更新計數器，非常適合在多線程環境中使用。
- * 
- * E. replace line 3 with
- * synchronized(test.count) {
- * test.count++;
- * }
- */
+You must make the count variable thread safe.
+Which two modifications meet your requirement? (Choose two.)
+A. replace line 2 with public static synchronized void main(String[] args) {
+B. replace line 1 with private volatile int count = 0;
+C. replace line 3 with
+synchronized(test) {
+test.count++;
+}
+D. replace line 1 with private AtomicInteger count = new AtomicInteger(0); and replace line 3 with test.count.incrementAndGet();
+E. replace line 3 with
+synchronized(test.count) {
+test.count++;
+}
+*/
 
 
  /*
