@@ -12,47 +12,17 @@ public class Q036 {
                 sb.append("|");
             }
         }
-        sb.delete(sb.length() - 2, sb.length() - 1);
-        sb.insert(0, '[').insert(sb.length() - 1, ']');
-        System.out.println(sb);
+        System.out.println("第一步驟: " + sb); // 0).D,|1).i,|2).a,
+        System.out.println("字串長度: " + sb.length()); //17
+        
+        sb.delete(sb.length() - 2, sb.length() - 1); //delete 方法，delete(int start, int end) 方法會刪除從 start 位置到 end 位置（不包括 end 位置）的所有字符。
+        // 刪除(17-2=15, 17-1=16) => (序號15, 序號16)，只刪15不刪16，序號15是a
+        System.out.println("第二步驟: " + sb); // 0).D,|1).i,|2).,
+
+        System.out.println("字串長度: " + sb.length()); //16
+        sb.insert(0, '[').insert(sb.length() - 1, ']'); //在序號0加上[，[變成0).D,|1).i,|2).,，在序號16-1=15地方加上]
+        System.out.println("最後輸出: " + sb); //[0).D,|1).i,|2).],
     }
 }
 
 //[0).D|1).i|2).i]
-
-/*
-宣告和初始化：
-
-宣告一個 String 陣列 furnitures，包含 "Door"、"Window" 和 "Chair"。
-宣告一個 StringBuilder 物件 sb，用於累積字符串。
-進入 for 循環：
-
-循環從 i = 0 開始，直到 i 小於 furnitures.length（即 3）。
-第一輪 (i = 0)：
-
-index 設定為 1（i + 1）。
-將 0).D 附加到 sb。
-由於 index（1）小於 furnitures.length（3），因此附加一個 |。
-第二輪 (i = 1)：
-
-index 設定為 2。
-將 1).i 附加到 sb。
-index（2）仍然小於 furnitures.length（3），因此附加一個 |。
-第三輪 (i = 2)：
-
-index 設定為 3。
-將 2).i 附加到 sb。
-此時 index（3）不小於 furnitures.length（3），所以不再附加 |。
-結束循環：
-
-循環結束後，sb 的內容為 0).D,|1).i,|2).i,（最後有一個多餘的逗號和管道符號）。
-刪除最後的多餘字符：
-
-使用 sb.delete(sb.length() - 2, sb.length() - 1) 來移除最後的逗號。
-包裝成陣列格式：
-
-使用 sb.insert(0, '[').insert(sb.length() - 1, ']') 來將結果包裝在 [ 和 ] 之間。
-輸出結果：
-
-使用 System.out.println(sb) 輸出最終結果。 
-*/
