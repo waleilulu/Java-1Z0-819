@@ -47,3 +47,12 @@ public class Q042 {
         System.out.println("Example class with annotations.");
     }
 }
+
+
+/*
+這段程式碼主要是在考察 Java 中的註解（Annotation）定義和使用，尤其是合法和非法註解的情況。讓我們逐一分析這段程式碼中的每個部分：
+註解成員必須是方法，不能是普通字段。
+註解的默認值 必須是常量表達式，不能使用 null 或其他非常量的值。
+註解不能繼承接口或類，它只能繼承自 java.lang.annotation.Annotation。
+註解中的成員 必須是方法，並且可以使用 default 關鍵字來指定默認值。
+*/
