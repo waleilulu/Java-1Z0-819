@@ -8,6 +8,7 @@ public class Q069 {
     //@Resource class ProcessOrders{
     @Resource("Customer1") class ProcessOrders{
     //@Resource() class ProcessOrders{
+
     }
 }
 
@@ -24,8 +25,8 @@ C. @Resource
    @Resource 註解需要提供 value 元素，而 value 需要一個字串陣列（String[]），這裡並未提供任何值，所以這樣寫會產生錯誤。
 
 D. @Resource(“Customer1”)
-    提供的是單一的字串 "Customer1"，但是 value() 元素需要的是字串陣列（String[]）。這樣寫不符合型別要求。
+    因為在 Java 註解中，如果一個註解的元素名稱是 value()，並且你只有一個元素要傳遞，則可以省略元素名稱。也就是說，@Resource("Customer1") 和 @Resource(value = "Customer1") 是等效的。當你這樣寫時，它會將 "Customer1" 自動包裝為 String[]（即 new String[] {"Customer1"}），這符合 value() 需要的參數類型。
 
 E. @Resource()
-
+    要改成@Resource(value = {}) class ProcessOrders{ 才可以
 */
