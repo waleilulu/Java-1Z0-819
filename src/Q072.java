@@ -24,7 +24,6 @@ public class Q072 {
     //UnaryOperator<Integer> u = i -> i * 2;
 
     list.replaceAll(u);
-    System.out.println(list);
     }
 }
 /*
