@@ -12,6 +12,8 @@ public class Q075 {
     }
 }
 
+//D
+
 /*
 Which change would make Q075 more secure?
 A. public String beta = "beta"; //這會讓 beta 成為 公開的，這意味著它可以被任何類別存取並修改，這樣會使程式的安全性變差。
