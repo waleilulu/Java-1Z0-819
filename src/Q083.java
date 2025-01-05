@@ -1,14 +1,13 @@
 public class Q083 {
     
 }
-//B 為正確的連線方式。如果資料庫需要身份驗證，則可以將使用者名稱和密碼作為額外的參數提供給 getConnection() 方法，DriverManager.getConnection("jdbc:derby:com", "J_SMITH", "dt12%2f3");
-
-
+//D、E
 /*
-Assuming the user credentials are correct, which expression will create a Connection?
-A. DriverManager.getConnection("http://database.jdbc.com", "J_SMITH", "dt12%2f3")
-B. DriverManager.getConnection("jdbc:derby:com")
-C. DriverManager.getConnection("jdbc.derby.com")
-D. DriverManager.getConnection()
-E. DriverManager.getConnection("J_SMITH", "dt12%2f3")
+Which two statements are correct about modules in Java? (Choose two.)
+
+A. module-info.java cannot be empty.
+B. module-info.java can be placed in any folder inside module-path.
+C. By default, modules can access each other as long as they run in the same folder.
+D. A module must be declared in module-info.java file. 每個模組都必須有一個 module-info.java 檔案。這個檔案必須至少包含模組名稱，以及其他需要的設定（如 requires、exports 等）。這是 Java 模組系統的基本要求。
+E. java.base exports all of the Java platforms core packages. java.base 模組是 Java 的核心模組，導出了所有 Java 平台的核心包，如 java.lang、java.util、java.io 等。所有的模組都可以自動訪問這些核心包。
 */
