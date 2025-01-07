@@ -10,11 +10,11 @@ public class Q092 {
 
         System.out.println("A: " + IntStream.range(0, 99).count()); //99
 
-        System.out.println("B: " +IntStream.rangeClosed(1, 100).count()); //100
+        System.out.println("B: " + IntStream.rangeClosed(1, 100).count()); //100
 
-        System.out.println("C: " +IntStream.range(1, 100).count()); //99
+        System.out.println("C: " + IntStream.range(1, 100).count()); //99
 
-        System.out.print("D: " +IntStream.rangeClosed(0, 100).map(x -> x).count()); //101
+        System.out.print("D: " + IntStream.rangeClosed(0, 100).map(x -> x).count()); //101
     }
 }
 
