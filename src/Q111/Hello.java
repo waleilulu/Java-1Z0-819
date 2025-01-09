@@ -10,9 +10,9 @@ public class Hello {
     }
 }
 
-
-//javac -d Q111 src\Q111\Hello.java
-//java -cp Q111 Q111.Hello
+//指令使用以下，把class檔跟java檔放在一起
+//javac src\Q111\Hello.java
+//java -cp src Q111.Hello
 /* 得出
 Module: unnamed module @5ecddf8f
 Name: null
