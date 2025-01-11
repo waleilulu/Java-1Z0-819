@@ -5,16 +5,19 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class Q129 {
+    //員工資料
     private String name;
     private LocalDate birthday;
     private int salary;
 
+    //建構子
     public Q129(String name, int salary, LocalDate birthday) {
         this.name = name;
         this.salary = salary;
         this.birthday = birthday;
     }
-    
+
+    //getter & setter
     public String getName() {
         return name;
     }
@@ -37,6 +40,7 @@ public class Q129 {
     public static void main(String[] args) {
         List<Q129> roster = new ArrayList<>();    
 
+        //加入一些員工資料做實例測試
         roster.add(new Q129("Alice", 30, IsoChronology.INSTANCE.date(1990, 1, 1)));
         roster.add(new Q129("Bob", 20, IsoChronology.INSTANCE.date(1985, 1, 1)));
         roster.add(new Q129("Charlie", 40, IsoChronology.INSTANCE.date(1992, 1, 1)));
@@ -44,7 +48,9 @@ public class Q129 {
         Predicate<Q129> p = e -> e.getSalary() > 25;
         LocalDate d = IsoChronology.INSTANCE.date(1989, 1, 1);
         long youngAndRich = roster.stream()
+                              //Which code fragment, when inserted on line 1, gives the number of employees who were born after January 1, 1989 and have a salary greater than 25?
                               // Line 1
+
                               //A
                               //.filter(p && e.getBirthday().isAfter(d))
                               //.count();
@@ -69,39 +75,6 @@ public class Q129 {
                                 // .get(true)
                                 // .count();)
                               
-
         System.out.println("Number of young and rich employees: " + youngAndRich);                             
     }
 }
-
-
-//B
-/*
-Which code fragment, when inserted on line 1, gives the number of employees who were born after January 1, 1989 and have a salary greater than
-25?
-
-
-//A
-.filter(p && e.getBirthday().isAfter(d))
-.count();
-
-//B
-.filter(p)
-.filter(e -> e.getBirthday().isAfter(d))
-.count();
-
-//C
-.collect(Collectors.partitioningBy(p);
-                              .get(true)
-                              .stream()
-                              .collect(Collectors.partitioningBy(e -> e.getBirthday().isAfter(d)))
-                              .get(true)
-                              .count();
-                              )
-
-//D
-.collect(Collectors.partitioningBy(e ->e.getBirthday().isAfter(d));
-                              .get(true)
-                              .count();
-
-*/
