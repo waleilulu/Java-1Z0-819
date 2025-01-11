@@ -1,4 +1,5 @@
 public class Q127 {
+    /*
     module citizen{
         exports com.name to greeting;
 
@@ -6,7 +7,9 @@ public class Q127 {
 
         }
     }
+    */
 }
+//B 。 com.name 套件中的 public 成員僅能被 greeting 模組存取。
 /*
 Which statement is true?
 A. All members of com.name are accessible only to the citizen and greeting modules.
