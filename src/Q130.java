@@ -15,14 +15,16 @@ public class Q130 {
     103     WEAVER      HR
     */
     public static void main(String[] args) {
+        //資料庫連線資訊
         String jdbcURL = "your_jdbc_url";
         String username = "your_username";
         String password = "your_password";
 
+        
         try(Connection conn = DriverManager.getConnection(jdbcURL, username, password);
         PreparedStatement query = conn.prepareStatement("SELECT ID, NAME* FROM EMP WHERE DEPT = ?");
         PreparedStatement update = conn.prepareStatement("INSER INTO RECRUITING (ID, NAME) VALUES (?, ?)")) {
-        
+           
         query.setString(1, "HR");
         ResultSet rs = query.executeQuery();
         while (rs.next()) {
