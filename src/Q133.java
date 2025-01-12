@@ -30,8 +30,6 @@ public class Q133 {
         MyClass myClass = new Q133().new MyClass();
         myClass.myMethod();
     }
-
-
 }
 
 //A、C
