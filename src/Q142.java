@@ -12,7 +12,7 @@ public class Q142 {
     }
 }
 
-//D，多了個>/span>。如果拿掉的話會印出Hello，答案就是A
+//D，多了個>/span>。如果拿掉的話，且最後一行改成 c.greet(args);會印出Hello，答案就是A
 /*
 What is the result?
 A. Hello
