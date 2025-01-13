@@ -1,7 +1,7 @@
-package Q140_2;
+package Q141_2;
 import java.util.ArrayList;
 
-import Q140_1.X;
+import Q141_1.X;
 
 public class Y extends X{
     public Y(){
