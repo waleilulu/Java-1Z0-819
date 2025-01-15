@@ -2,13 +2,15 @@ import java.util.Locale;
 
 public class Q147 {
     public static void main(String[] args) {
+        //Locale 類別是 Java 中用於表示地區設置的類別。它包含語言、國家/地區和變體等資訊。
         Locale locale;
 
-        // 正確的選項
-        locale = new Locale("en", "GB"); // 選項 C
+        // 使用 Locale 類別的建構子
+        locale = new Locale("en", "GB"); // C
         System.out.println(locale); // en_GB
 
-        locale = Locale.getDefault(); // 選項 E
+        // 使用 Locale 類別的靜態方法
+        locale = Locale.getDefault(); // E
         System.out.println(locale); // en_TW
     }
 }
