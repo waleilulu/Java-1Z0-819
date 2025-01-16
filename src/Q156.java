@@ -38,6 +38,7 @@ public class Q156 {
     // }
 }
 
+//A
 /*
 What is the result?
 A. The compilation fails.
