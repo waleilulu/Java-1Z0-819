@@ -5,8 +5,8 @@ public class Q177 {
         /*
         字串:  h  a  t     a  t     s  t  o  r  e
         索引:  0  1  2  3  4  5  6  7  8  9  10
-
         */
+        
         s.substring(x + 3); // x=1，+3後=4，取得從 "at" 之後的子字串，但沒有被保留
         System.out.println(s.substring(4)); // 索引4後面字串為: at store
         
