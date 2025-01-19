@@ -23,6 +23,7 @@ public class Q175 {
     }
 }
 
+//A
 /*
 Which statement on line 1 enables the Test class to compile?
 A. if(p.test(number)) {
