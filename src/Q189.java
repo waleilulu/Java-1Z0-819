@@ -4,8 +4,8 @@ public class Q189 {
     public static void main(String[] args) {
         Console console = System.console();
         var name = console.readLine("Input name: ");
-        var passwprd = console.readPassword("Input Password: ");
-        System.out.println("Name is: " + name + ", Password is: " + String.valueOf(passwprd));
+        var password = console.readPassword("Input Password: ");
+        System.out.println("Name is: " + name + ", Password is: " + String.valueOf(password));
         /*
         Input name: Duke
         Input Password: 
