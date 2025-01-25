@@ -1,4 +1,8 @@
-// 定義自訂的 Resource 註解
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+// 定義自訂的 Resource 註解，設置為 RUNTIME 保證反射能夠讀取到註解
+@Retention(RetentionPolicy.RUNTIME)
 @interface Resource {
     String value() default "Customer1";
     // E要符合需要改成 String[] value() default "Customer1";
@@ -9,7 +13,7 @@
 // 使用 Resource 註解的類
 /* Loc1 */
 //A
-//@Resource("Customer2")
+@Resource("Customer2")
 
 //B
 //@Resource(value="Customer2")
@@ -22,6 +26,7 @@
 
 //E，錯誤，回傳值要改才可以編譯
 //@Resource({"Customer2"})
+
 class ProcessOrders {
     // 類的內容
     void process() {
@@ -32,10 +37,19 @@ class ProcessOrders {
 // 測試類
 public class Q201 {
     public static void main(String[] args) {
-        // 檢查 ProcessOrders 類是否有註解
-        if (ProcessOrders.class.isAnnotationPresent(Resource.class)) {
-            Resource resource = ProcessOrders.class.getAnnotation(Resource.class);
-            System.out.println("Resource value: " + resource.value());
+        try {
+            // 確保類被加載，這裡不需要包名，假設類在默認包中
+            Class<?> clazz = ProcessOrders.class;
+            
+            // 檢查是否有 Resource 註解
+            if (clazz.isAnnotationPresent(Resource.class)) {
+                Resource resource = clazz.getAnnotation(Resource.class);
+                System.out.println("Resource value: " + resource.value());
+            } else {
+                System.out.println("No @Resource annotation found.");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
