@@ -19,6 +19,7 @@ public class Q200 {
             // int a=0;
             // for(; a<10; a++){
             // System.out.print(a++);
+            
             //方法二
             // for(int a=0; a<10; a++){
             //     System.out.print(a++);
