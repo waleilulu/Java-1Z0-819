@@ -24,3 +24,5 @@ public class Q022 {
         System.out.println("Test E (10, 5): " + testE.test(10, 5)); // 應輸出 false
     }
 }
+
+// 與Q204.java類似
